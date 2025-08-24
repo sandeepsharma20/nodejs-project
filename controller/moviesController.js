@@ -5,7 +5,18 @@
 
 exports.getAllMovies= async(req,res)=>{
 try {
-  const movies= await Movie.find();
+
+  //const movies= await Movie.find(req.query);
+  let queryStr=JSON.stringify(req.query)
+  
+  queryStr=queryStr.replace(/\b(gte|gt|lte|lt)\b/g,(match)=>{
+   return `$${match}`
+  });
+  const queryObj=JSON.parse(queryStr);
+
+
+const movies= await Movie.find(queryObj);
+
   res.status(200).json({
     status:"success",
    

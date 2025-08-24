@@ -1,1 +1,32 @@
-[{"id":1,"name":"die hard","releaseYear":1998,"duration":90},{"id":3,"name":"shole","releaseYear":1993,"duration":120},{"id":4,"name":"test","relyear":2000,"duratin":30},{"id":5,"name":"test","relyear":2000,"duratin":30}]
+  [
+  {
+    "name": "Interstellar Voyage",
+    "description": "A group of astronauts travel through a wormhole in search of a new home for humanity.",
+    "duration": 169,
+    "rating": 8.6,
+    "totalRating": 7000,
+    "releaseYear": 2014,
+    "releaseDate": "2014-11-07T00:00:00.000Z",
+    "createdAt": "2025-08-24T00:00:00.000Z",
+    "genres": ["Sci-Fi", "Adventure", "Drama"],
+    "directors": ["Christopher Nolan"],
+    "coverImage": "interstellar-cover.jpg",
+    "actors": ["Matthew McConaughey", "Anne Hathaway", "Jessica Chastain"],
+    "price": 399
+  },
+  {
+    "name": "The Silent Horizon",
+    "description": "A suspenseful mystery where a scientist discovers signals from deep space that could change the fate of humanity.",
+    "duration": 142,
+    "rating": 8.2,
+    "totalRating": 3200,
+    "releaseYear": 2022,
+    "releaseDate": "2022-05-20T00:00:00.000Z",
+    "createdAt": "2025-08-24T00:00:00.000Z",
+    "genres": ["Mystery", "Thriller", "Sci-Fi"],
+    "directors": ["Denis Villeneuve"],
+    "coverImage": "silent-horizon-cover.jpg",
+    "actors": ["Emily Blunt", "Oscar Isaac", "Benedict Wong"],
+    "price": 449
+  }
+]
