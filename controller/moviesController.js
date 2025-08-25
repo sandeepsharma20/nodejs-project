@@ -98,6 +98,28 @@ res.status(204).json({
     status:"fail",
 message:error.message
   })
+
 }
 
+ }
+ exports.getMovieStats=async (req,res)=>{
+ try {
+  const stats=await Movie.aggregate([
+    {
+      $match:{rating:{$gte:5}}
+    }
+  ])
+  res.status(200).json({
+    status:'success',
+    count:stats.length,
+    data:{
+      stats
+    }
+  });
+ } catch (error) {
+  res.status(404).json({
+    status:"fail",
+    message:error.message
+  });
+ }
  }

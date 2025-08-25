@@ -56,7 +56,13 @@
       type:Number,
       require:[true,'price is required']
    }
+  },{
+   toJSON:{virtuals:true},
+   toObject:{virtuals:true}
   });
+  moviesSchema.virtual('durationInHours').get(function(){
+   return this.duration/60;
+  })
   // create a model
   const Movie=mongoose.model('Movie',moviesSchema);
   module.exports=Movie;

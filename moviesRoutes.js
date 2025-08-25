@@ -10,6 +10,7 @@ const router=express.Router();
 //express.Router return a middleware so moviesrouter is middleware
 
 // using mounting technique
+router.route('/movie-stats').get(moviesController.getMovieStats)
 router.route('/')
  .get(moviesController.getAllMovies)
  .post(moviesController.CreateMovie)
