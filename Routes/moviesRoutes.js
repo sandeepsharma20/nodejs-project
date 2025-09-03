@@ -1,5 +1,5 @@
 const express=require('express')
-const moviesController=require('./controller/moviesController.js')
+const moviesController=require('../controller/moviesController.js')
  
 const router=express.Router();
 //  router.param('id',(req,res,next,value)=>{

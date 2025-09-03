@@ -1,7 +1,8 @@
  
 const express=require('express');
  const morgan=require('morgan');
- const moviesRouter=require('./moviesRoutes')
+ const moviesRouter=require('./Routes/moviesRoutes')
+ const userRouter=require('./Routes/authRouter')
 
 
  //it return a function that store in variable
@@ -28,7 +29,15 @@ const express=require('express');
 
  //using mounting
 app.use('/api/movies', moviesRouter)  
- 
+app.use('/api/users', userRouter)
+//gobal error handling method
+app.use((error,req,res,next)=>{
+    error.statusCode=error.statusCode||500;
+    res.status(error.statusCode).json({
+        status:error.statusCode,
+        message:error.message,
+    });
+})
 module.exports=app;
 
 
